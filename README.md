@@ -1,7 +1,8 @@
 ## Introduction (Round 0)
 <br>
-<b>Discipline | <b>Engineering 
-:--|:--| 
+
+<b>Discipline |<b>Engineering 
+  :--|:--|
 <b> Lab | <b> 3D Printing
 <b> Experiment|     <b> 1. Simulation of anatomy of FDM 3D printer
 
