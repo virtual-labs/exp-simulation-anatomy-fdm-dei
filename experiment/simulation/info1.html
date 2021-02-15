@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+         <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+    <style>
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: aliceblue;
+            color: black;
+            font-size: 10px;
+        }
+
+        .imgBorder {
+            border: 2px;
+        }
+.button {
+  background-color: aliceblue;
+}
+.button_1{
+  background-color: #337AB7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    </style>
+    </head>
+    <body>
+        <div class="row header">
+            <div id="heading" class="col-md-10 col-lg-10 col-sm-10">
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2" style="padding-left:80px">
+              <button class="button_1"id="close" type="button" onclick="window.location.href = 'part1.html'">CLOSE</button>
+            </div>
+
+ <!-- <div class="col-md-2 col-lg-2 col-sm-2 style="padding-right:100px;">
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+         <ul class="navbar navbar-default nav navbar-nav navbar-right">
+         <li class="active">
+         <a href="parts.html">CLOSE</a>
+         </li>
+        </ul>
+     </div>
+  </div> -->
+</div>
+            <div class="row" >
+                <div id="imageDiv" class="col-md-4 col-lg-4 col-sm-4 imgBorder">
+                </div>
+
+                <div id="info" class="col-lg-7 col-md-7 col-sm-7" style="align-content: left;">
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                </div>
+            </div>
+
+
+        <script>
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+            var num = getUrlVars()['num'];
+            var link = getUrlVars()['link'];
+            var pathImage = getUrlVars()['pathImage'];
+
+            function loadData(){
+                    var list = [
+                                {
+                                    data:'The frame is made up of aluminum and is developed by casting process. This frame provides the main structural support that is required for the printer. The size of the product that can be fabricated by the printer depends on the size of the frame of the printer. The frame is made up of the light weight material to reduce the weight of the printer and make it easily portable.'
+                                },
+                                {
+                                    data:'Support the smooth rod that are responsible for the movement of bed.'
+                                },
+                                {
+                                    data:'Specifications of threaded rods:- M5 The threaded rods provide the path for the movement of the x-axis assembly along the z-axis. The threaded rods are coupled with motor using the couplings. The nut is inserted in the x-axis assembly which moves up and down and carries the x-axis assembly with it'
+                                },
+                                {
+                                    data:'Name of pulley=Aluminum GT2 Timing Pulley Specifications of the pulley:-Pitch=2mm. Bore=5mm. Teeth=20. Material=Aluminum. Belt Width=7mm. Pulley and belt combination offers impressive linear motion. Rounded teeth profile of pulley assures that belt tooth will fit perfectly with pulley, which minimize backlash to great extent. Pulley comes with grub screws so that they can be secure tightly on motor shaft (Diameter 5mm).'
+                                },
+                                {
+                                    data:'The smooth rods are same as those used in the z axis assembly. The bearings of the frame of heat bed on these rod. These rods provide the path for movement of the frame of the heat bed.'
+                                },
+                                {
+                                    data:'Diameter of the bearing=8mm These bearings guide the frame of heat bed on the y-axis.'
+                                },
+                                {
+                                    data:'All the specifications of the motors used in the y-axis assembly are same as the specifications of motors used the z-axis assembly. This motor is responsible for the movement of the bed support along with heat bed in the y axis. '
+                                },
+                                {
+                                    data:'The frame of the heat bed is mounted on the plain rods using the bearings. On the top of the frame the heat bed is screwed up using the springs at each corner. The shaped of frame is designed so as so to reduce the weight of the frame to make it easy portable.'
+                                },
+                                {
+                                    data:'Dimensions of Heat Bed: 21.4cm X 21.4 cm, width 2mm. Heat beds are used because they dramatically improve print quality by keeping the extruded plastic warm and thus preventing warping. Warping is a common condition caused by plastic on the edges of the part cooling down at an uneven rate when compared to the plastic inside of the part.'
+                                },
+                                {
+                                    data:'#screen'
+                                },
+                                {
+                                    data:'THREADED RODS Number of threaded rods used=2 Specifications of threaded rods:- M5 The threaded rods provide the path for the movement of the x-axis assembly along the z-axis. The threaded rods are coupled with motor using the couplings. The nut is inserted in the x-axis assembly which moves up and down and carries the x-axis assembly with it SMOOTH RODS Number of plane rods=2 Diameter of rods=8mm Length of Rods=42cm These rods provide the smooth path and support for the movement of the x-axis assembly.'
+                                },
+                                {
+                                    data:'#z axis support'
+                                },
+                                {
+                                    data:'#idler'
+                                },
+                                {
+                                    data:'PULLEY It transfers the rotational motion of motor to linear motion of belt.'
+                                },
+                                {
+                                    data:'The extruder assembly moves in the x-axis along these smooth rods. The extruder assembly is mounted on the plain rods using the set of plane bearings. '
+                                },
+                                {
+                                    data:'EXTRUDER The extruder heats the solid filament and converts it into a hot liquid paste which is extruded from the nozzle during the fabrication of each layer. The diameter of the nozzle orifice is 1.75mm.'
+                                },
+                                {
+                                    data:'#bottom support'
+                                },
+                                {
+                                    data:'#material stand'
+                                },
+                                {
+                                    data:'material'
+                                },
+                                {
+                                    data:'Power supply'
+                                },
+                                {
+                                    data:'Electronic Box'
+                                },
+                                ];
+
+                    var img = document.getElementById("imageDiv");
+                    img.innerHTML = '<img src="'+pathImage+'">';
+
+                    var heading = document.getElementById("heading");
+                    heading.innerHTML = '<h1>'+link+'</h1> ';
+
+                    var info = document.getElementById("info");
+                    info.innerHTML = '<h2><p align="justify">'+list[num-1].data+'</p></h2>';
+                }
+            loadData();
+
+        </script>
+    </body>
+    </html>
