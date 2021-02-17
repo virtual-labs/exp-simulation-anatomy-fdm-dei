@@ -17,9 +17,11 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
+  overflow-y: scroll; overflow-x:hidden;
+body
+{
+ position: absolute; 
+ margin: 0;
 }
 article,
 aside,
