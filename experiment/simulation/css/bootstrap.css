@@ -8,11 +8,12 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-   overflow-y: scroll;
 }
 body {
   margin: 0;
   position: absolute;
+  height: 1200px;
+  width: 1000px;
 }
 article,
 aside,
