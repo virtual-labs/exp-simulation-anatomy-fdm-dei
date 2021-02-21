@@ -9,9 +9,8 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-body {
+body {position: absolute;
   margin: 0;
-  position: absolute;
   height: 1200px;
   width: 1000px;
 }
