@@ -13,13 +13,17 @@
  * }
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-html {
+html 
+{
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  position: absolute;
+  height: 1200px;
+  width: 1000px;
 }
 article,
 aside,
