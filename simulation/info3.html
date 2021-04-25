@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+         <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+    <style>
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: aliceblue;
+            color: black;
+            font-size: 10px;
+        }
+
+        .imgBorder {
+            border: 2px;
+        }
+.button {
+  background-color: aliceblue;
+}
+.button_1{
+  background-color: #337AB7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    </style>
+    </head>
+    <body>
+      <div class="row header">
+          <div id="heading" class="col-md-10 col-lg-10 col-sm-10">
+
+          </div>
+          <div class="col-md-2 col-lg-2 col-sm-2" style="padding-left:80px">
+            <button class="button_1"id="close" type="button" onclick="window.location.href = 'part3.html'">CLOSE</button>
+          </div>
+
+<!-- <div class="col-md-2 col-lg-2 col-sm-2 style="padding-right:100px;">
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+       <ul class="navbar navbar-default nav navbar-nav navbar-right">
+       <li class="active">
+       <a href="parts.html">CLOSE</a>
+       </li>
+      </ul>
+   </div>
+</div> -->
+</div>
+
+            <div class="row" >
+                <div id="imageDiv" class="col-md-4 col-lg-4 col-sm-4 imgBorder">
+                </div>
+
+                <div id="info" class="col-lg-7 col-md-7 col-sm-7" style="align-content: left;">
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                </div>
+            </div>
+<div class="footer" style="height: 200px; background: white">
+</div>
+
+        <script>
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+            var num = getUrlVars()['num'];
+            var link = getUrlVars()['link'];
+            var pathImage = getUrlVars()['pathImage'];
+
+            function loadData(){
+                    var list = [
+                                {
+                                    data:'Base is the main structural base and support for the printer.'
+                                },
+                                {
+                                    data:'They hold and support the vertical axes.'
+                                },
+                                {
+                                    data:'These are the rods which are placed verically along with linear rail.'
+                                },
+                                {
+                                    data:'These top covers are placed over the rods.'
+                                },
+                                {
+                                    data:'It is the frame which forms the upper structure with the top covers.'
+                                },
+                                {
+                                    data:'Linear rails provides the guideway over which sliding connectors moves with the help of stepper motors.'
+                                },
+                                {
+                                    data:'These motors govern the movement of the sliding connectors which are holding the extruder assembly with help of connecting rods.'
+                                },
+                                {
+                                    data:'Base provides a platform for the placement of the print bed.'
+                                },
+                                {
+                                    data:'Bed or print bed is the plate like surface on which the material is extruded by the printer.'
+                                },
+                                {
+                                    data:'These sliding connectors traverse along the linear rails and hold the extruder assembly with the help of connecting rods. By adjusting the position of these sliders the position of extruder is controlled.'
+                                },
+                                {
+                                    data:'Extruder assembly is hanging by these connected rods. They connects the extruder with the sliders.'
+                                },
+                                {
+                                    data:'Pins are used to fasten extruder assembly with the connecting rods.'
+                                },
+                                {
+                                    data:'It is a motor connected with a gear'
+                                },
+                                {
+                                    data:'LCD screen shows the options to start/stop 3D printing and other navigation options'
+                                },
+                                {
+                                    data:'The extruder heats the solid filament and converts it into a hot liquid paste which is extruded from the nozzle during the fabrication of each layer.'
+                                },
+                                {
+                                    data:'Extruder is placed inside the extruder cover.'
+                                },
+                                {
+                                    data:'When extruder is completely assembled with extruder cover then it is called assembled extruder.'
+                                },
+                                ];
+
+                    var img = document.getElementById("imageDiv");
+                    img.innerHTML = '<img src="'+pathImage+'">';
+
+                    var heading = document.getElementById("heading");
+                    heading.innerHTML = '<h1>'+link+'</h1> ';
+
+                    var info = document.getElementById("info");
+                 info.innerHTML = '<h2><p align="justify">'+list[num-1].data+'</p></h2>';
+                }
+            loadData();
+
+        </script>
+    </body>
+    </html>
